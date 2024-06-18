@@ -5,7 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -30,41 +33,26 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-
-            //for nesting layout
-            Column{
-                Text(text = "HelloWorld ",
-                    fontSize = 20.sp,
-                    color = Color.Blue
+//use different modifiers
+            Text(text = "Hello World",
+                fontSize = 50.sp,
+                modifier = Modifier
+                    .padding(20.dp)
+                    .background(Color.Green)
+                    .clickable {
+                        println("I am clicked")
+                    }
+                    .border(4.dp, Color.Red)
+                    .padding(7.dp)
+                
                 )
-                Row {
 
-
-                    Text(
-                        text = "Subhashree ",
-                        fontSize = 20.sp,
-                        color = Color.Red
-                    )
-                    Text(
-                        text = "Subhashree",
-                        fontSize = 20.sp,
-                        color = Color.Green
-                    )
-                    Text(
-                        text = "Subhashree",
-                        fontSize = 20.sp, color = Color.Magenta
-                    )
-                }
-                Box(modifier = Modifier.padding(8.dp)){
-                    Text(text = "SUbha", fontSize = 20.sp, color = Color.Red)
-                    Text(text = "s", fontSize = 20.sp)
-                }
-
-            }
-            
 
 
         }
     }
 }
+
+
+
 
