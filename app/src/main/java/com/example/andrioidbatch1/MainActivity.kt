@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -28,13 +29,23 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-          Column (modifier = Modifier.width(400.dp)){
-              Text(text = "Hello World I am Subhashre Mohanty and Studing",
-                  modifier =Modifier.basicMarquee(),
-                  fontSize = 50.sp,
+            //for row layout
+          Row{
+              Text(text = "HelloWorld ",
+                  fontSize = 20.sp,
                   color = Color.Blue
               )
+              Text(text = "Subhashree ",
+                  fontSize = 20.sp,
+                  color = Color.Red)
+              Text(text = "Subhashree",
+                  fontSize = 20.sp,
+                  color = Color.Green)
+              Text(text = "Subhashree",
+                  fontSize = 20.sp, color = Color.Magenta)
+
           }
+
 
         }
     }
