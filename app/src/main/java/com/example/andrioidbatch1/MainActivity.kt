@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.basicMarquee
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,22 +30,38 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            //for column layout
-          Column{
-              Text(text = "HelloWorld ",
-                  fontSize = 20.sp,
-                  color = Color.Blue
-              )
-              Text(text = "Subhashree ",
-                  fontSize = 20.sp,
-                  color = Color.Red)
-              Text(text = "Subhashree",
-                  fontSize = 20.sp,
-                  color = Color.Green)
-              Text(text = "Subhashree",
-                  fontSize = 20.sp, color = Color.Magenta)
 
-          }
+            //for nesting layout
+            Column{
+                Text(text = "HelloWorld ",
+                    fontSize = 20.sp,
+                    color = Color.Blue
+                )
+                Row {
+
+
+                    Text(
+                        text = "Subhashree ",
+                        fontSize = 20.sp,
+                        color = Color.Red
+                    )
+                    Text(
+                        text = "Subhashree",
+                        fontSize = 20.sp,
+                        color = Color.Green
+                    )
+                    Text(
+                        text = "Subhashree",
+                        fontSize = 20.sp, color = Color.Magenta
+                    )
+                }
+                Box(modifier = Modifier.padding(8.dp)){
+                    Text(text = "SUbha", fontSize = 20.sp, color = Color.Red)
+                    Text(text = "s", fontSize = 20.sp)
+                }
+
+            }
+            
 
 
         }
