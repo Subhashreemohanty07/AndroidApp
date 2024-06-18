@@ -29,8 +29,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            //for row layout
-          Row{
+            //for column layout
+          Column{
               Text(text = "HelloWorld ",
                   fontSize = 20.sp,
                   color = Color.Blue
