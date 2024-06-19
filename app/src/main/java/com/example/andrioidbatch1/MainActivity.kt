@@ -25,6 +25,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -41,24 +43,32 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
+            var showAlert= remember {
+                mutableStateOf(value = true)
+            }
+            if (showAlert.value) {
+                AlertDialogFunction{
+                    showAlert.value =false
 
-            AlertDialogFunction()
+                }
+            }else{
+                Text(text = "Alert Closed")
+            }
+            }
+
         }
-    }
-}
+
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
- fun AlertDialogFunction() {
-    AlertDialog(title = { Text(text = "I am a Alert")}, text = {
+ fun AlertDialogFunction( onConformation:()->Unit) {
+    AlertDialog(title = { Text(text = "I am a Alert") }, text = {
         Text(text = "Please Acknoweldge me")
     }, onDismissRequest = { /*TODO*/ }, confirmButton = {
-        Button(onClick = { /*TODO*/ }) {
-            Text(text = "OK")
+        Button(onClick = { onConformation() }) { Text(text = "OK") }
+    }
+)}}
 
-        }
-    })
-}
 
 
 
