@@ -19,8 +19,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AlertDialogDefaults
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -43,6 +45,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -59,31 +62,38 @@ class MainActivity : ComponentActivity() {
             //use scaffold
 //            Scaffold(
 //                topBar = Top
-
-            CardExample()
+Column {
+    CardExample()
+    ChipExample()
+}
 //            )
         }
     }
-
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
  @Composable
         fun ScafflodSample() {}
 @Composable
 fun CardExample(){
     Card (
-        colors = CardDefaults.cardColors(
-            containerColor = Color.Green
-        ),
-        modifier = Modifier.size(width = 300.dp, height = 100.dp)
+        colors = CardDefaults.cardColors(containerColor = Color.Green
+        ), modifier = Modifier
+            .size(width = 300.dp, height = 100.dp)
             .padding(10.dp),
     ){
         Text(text = "Simple Card Example",
-            modifier = Modifier.padding(20.dp),
-            textAlign = TextAlign.Center)
+            modifier = Modifier.padding(20.dp), textAlign = TextAlign.Center)
+    }
+}@Composable
+    fun ChipExample(){
+        AssistChip(onClick = { /*TODO*/ }, label = { Text(text = "I am an AssistChip") },
+            leadingIcon ={
+                Icon(Icons.Filled.Menu,
+                    contentDescription = "")
+            })}
+
 
     }
-}
-}
+
 
 
 
