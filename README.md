@@ -6,6 +6,5 @@
 ![Screenshot 2024-06-18 204858](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/c6ea128b-18c4-4236-93a7-6c3e1544dc12)
 <h2>Different Modifiers</h2>
   ![Screenshot 2024-06-18 215030](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/614d2251-c8ab-42c7-a95a-53d183cf3a32)
-
-
-
+<h2>Different Type of Button</h2>
+![Screenshot 2024-06-19 121532](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/334038a1-fefa-4f8e-9e76-b022431f8911)
