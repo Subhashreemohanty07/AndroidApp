@@ -11,4 +11,5 @@
 <h2>Dialog/Alert Msg</h2>
 ![Screenshot 2024-06-19 160658](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/cee2b5ff-34eb-45a4-b524-94653de35524)
 <h2>Scaffold</h2>
+<p>It Provides a fundamental Structure it contain top bar,Bottom Bar, Floating Action Button,Inner Content view</p>
 ![Screenshot 2024-06-20 005313](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/b993050c-c2bf-43e1-b429-3848cabdf58e)
