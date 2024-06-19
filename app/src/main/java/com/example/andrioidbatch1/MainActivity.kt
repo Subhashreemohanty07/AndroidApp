@@ -16,8 +16,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,27 +39,27 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-//use alignment
-            Row(modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically)
-            {
+//Differnet button by default  all buttons are filled button
 
-                Text(text = "Hello World",
-                    fontSize = 50.sp,
-                    modifier = Modifier
-                        .padding(20.dp)
-                        .background(Color.Green)
-                        .clickable {
-                            println("I am clicked")
-                        }
-//                        .border(4.dp, Color.Red)
-//                        .padding(7.dp)
+            Column {
 
+                Button(onClick = { println("I am Clicked") }) {
+                    Text(text = "Filled Button")
+                }
+            OutlinedButton(onClick = {  }) {
+                Text(text = "Outline Button")
 
-                )
+            }
+            ElevatedButton(onClick = { /*TODO*/ }) {
+                Text(text = "Eleveted Button")
 
             }
 
+            TextButton(onClick = { println("I am clicked") }) {
+                Text(text = "Text BUtton")
+
+            }
+            }
         }
     }
 }
