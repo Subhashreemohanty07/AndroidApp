@@ -16,6 +16,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.AlertDialogDefaults
 import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.OutlinedButton
@@ -39,29 +41,23 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-//Differnet button by default  all buttons are filled button
 
-            Column {
-
-                Button(onClick = { println("I am Clicked") }) {
-                    Text(text = "Filled Button")
-                }
-            OutlinedButton(onClick = {  }) {
-                Text(text = "Outline Button")
-
-            }
-            ElevatedButton(onClick = { /*TODO*/ }) {
-                Text(text = "Eleveted Button")
-
-            }
-
-            TextButton(onClick = { println("I am clicked") }) {
-                Text(text = "Text BUtton")
-
-            }
-            }
+            AlertDialogFunction()
         }
     }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+ fun AlertDialogFunction() {
+    AlertDialog(title = { Text(text = "I am a Alert")}, text = {
+        Text(text = "Please Acknoweldge me")
+    }, onDismissRequest = { /*TODO*/ }, confirmButton = {
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "OK")
+
+        }
+    })
 }
 
 
