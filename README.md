@@ -15,6 +15,7 @@
   ![Screenshot 2024-06-20 005313](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/b993050c-c2bf-43e1-b429-3848cabdf58e)
 <h2>Card And Chip</h2>
 ![Screenshot 2024-06-21 013100](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/7a80d2b3-c835-49a0-a451-9aaebda24341)
-<h2>Progress Indicators</h2>
-![Screenshot 2024-06-21 013100](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/e0f9e315-ff2d-4175-84a9-13c622cb7007)
+<h2>Progress Indicators and Slider</h2>
+![Screenshot 2024-06-21 013100]
+![Screenshot 2024-06-21 015821](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/892df701-340b-419c-8a46-43c6298b7568)
 
