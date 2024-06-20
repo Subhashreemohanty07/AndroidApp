@@ -38,6 +38,7 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -45,6 +46,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.*
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment.Horizontal
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -65,23 +68,39 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            Text(text = "Progress Indicator", fontSize = 30.sp)
-            ProgressIndExample()
+            Column {
+
+                Text(text = "Slider", fontSize = 30.sp)
+                SliderExample()
+                Text(text = "Progress Indicator", fontSize = 30.sp)
+               ProgressIndExample()
+            }
+
         }
     }
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
+fun SliderExample()
+{
+    var  sliderPosition by remember {
+        mutableStateOf(value= 0f)
+    }
+    Column(modifier = Modifier.padding(10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(text = sliderPosition.toString())
+        Slider(value = sliderPosition, onValueChange ={sliderPosition=it} )
+    }
+
+}
+    @Composable
     fun ProgressIndExample() {
     Column (horizontalAlignment = Alignment.CenterHorizontally,
         modifier= Modifier
-            .fillMaxSize()
-            .fillMaxWidth()
-            .padding(20.dp))
+            .fillMaxSize().fillMaxWidth().padding(20.dp))
         {
         LinearProgressIndicator(progress = 0.8f,
             modifier = Modifier
-                .padding(50.dp)
-                .height(15.dp)
+                .padding(50.dp).height(15.dp)
                 .fillMaxWidth()
                 .background(Color.Gray), color = Color.Blue,
             )
