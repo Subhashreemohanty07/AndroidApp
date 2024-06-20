@@ -21,6 +21,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.AlertDialogDefaults
@@ -39,6 +41,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
@@ -68,17 +72,33 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            Column {
+            Text(text = "Switch", fontSize = 40.sp)
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize(),
+                    contentAlignment = Alignment.Center
+                ){
 
-                Text(text = "Slider", fontSize = 30.sp)
-                SliderExample()
-                Text(text = "Progress Indicator", fontSize = 30.sp)
-               ProgressIndExample()
-            }
-
+                    SwitchExample()
+                }
         }
     }
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
+@Composable
+fun SwitchExample(){
+    var isChecked by remember {
+        mutableStateOf(value = false)
+    }
+    var  icons= if (isChecked) Icons.Filled.Check  else Icons.Filled.Close
+    Switch(checked = isChecked, onCheckedChange ={ isChecked=it },
+        thumbContent = {
+            Icon(
+                imageVector =icons,
+                contentDescription = null,
+                modifier = Modifier.size(SwitchDefaults.IconSize)
+            )
+        })
+}
 @Composable
 fun SliderExample()
 {
@@ -96,11 +116,14 @@ fun SliderExample()
     fun ProgressIndExample() {
     Column (horizontalAlignment = Alignment.CenterHorizontally,
         modifier= Modifier
-            .fillMaxSize().fillMaxWidth().padding(20.dp))
+            .fillMaxSize()
+            .fillMaxWidth()
+            .padding(20.dp))
         {
         LinearProgressIndicator(progress = 0.8f,
             modifier = Modifier
-                .padding(50.dp).height(15.dp)
+                .padding(50.dp)
+                .height(15.dp)
                 .fillMaxWidth()
                 .background(Color.Gray), color = Color.Blue,
             )
@@ -111,6 +134,7 @@ fun SliderExample()
         }
 
     }
+
     }
 
 
