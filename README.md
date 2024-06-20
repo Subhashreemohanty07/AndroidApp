@@ -18,4 +18,6 @@
 <h2>Progress Indicators and Slider</h2>
 ![Screenshot 2024-06-21 013100]
 ![Screenshot 2024-06-21 015821](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/892df701-340b-419c-8a46-43c6298b7568)
+<h2>Switch</h2>
+![Screenshot 2024-06-21 022755](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/918e246b-33cf-4512-a4a9-a42c10f541ce)
 
