@@ -21,3 +21,6 @@
 <h2>Switch</h2>
 ![Screenshot 2024-06-21 022755](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/918e246b-33cf-4512-a4a9-a42c10f541ce)
 
+<h2>Api Calls</h2>
+![Screenshot 2024-06-23 013159](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/ff2940dc-59d1-4971-9af4-902b9621ff0a)
+
