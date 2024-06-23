@@ -24,6 +24,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 //import coil.compose.rememberAsyncImagePainter
+import coil.compose.rememberImagePainter
 import com.google.gson.annotations.SerializedName
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
@@ -47,6 +48,17 @@ class MainActivity : ComponentActivity() {
     }
 
     @OptIn(ExperimentalFoundationApi::class)
+    @Composable
+    fun ProductImage(imageUrl: String) {
+        Image(
+            painter = rememberImagePainter(data = imageUrl),
+            contentDescription = "Product Image",
+            modifier = Modifier
+                .size(120.dp)
+                .aspectRatio(1f),
+            contentScale = ContentScale.Crop
+        )
+    }
     @Composable
     fun ProductGrid(products: List<Product>) {
         LazyVerticalGrid(
@@ -72,12 +84,14 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier.padding(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                ProductImage(imageUrl = product.image)
+                Spacer(modifier = Modifier.height(8.dp))
 
                 // Title
                 Text(
                     text = product.title,
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color.Blue,
+                    color = Color.Red,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(horizontal = 8.dp)
@@ -89,7 +103,7 @@ class MainActivity : ComponentActivity() {
                 Text(
                     text = product.category,
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color.Red,
+                    color = Color.Blue,
                     modifier = Modifier.padding(horizontal = 8.dp)
                 )
 
