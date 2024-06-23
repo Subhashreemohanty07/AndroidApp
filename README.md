@@ -22,6 +22,7 @@
 ![Screenshot 2024-06-21 022755](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/918e246b-33cf-4512-a4a9-a42c10f541ce)
 
 <h2>Api Calls</h2>
-![Screenshot 2024-06-23 191441](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/721cff8b-0c49-4576-a161-78a0c6777a0e)
-![Screenshot 2024-06-23 191449](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/1cd7b629-f0be-40c2-b413-1f0cb8d937e5)
+![Screenshot 2024-06-23 203338](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/5ce5bddf-9397-4914-8765-1884ef4b71c6)
+![Screenshot 2024-06-23 204211](https://github.com/Subhashreemohanty07/AndroidApp/assets/138459225/2035bb7a-535e-4079-9326-52a2449e091a)
+
 
